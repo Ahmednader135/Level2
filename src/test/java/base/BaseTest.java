@@ -14,7 +14,7 @@ import java.io.FileNotFoundException;
 
 public class BaseTest {
 
-    public WebDriver driver;
+    public WebDriver driver;//new
     public HomePage homePage;
     public ReadDataFromJson readDataFromJson;
     @BeforeClass
