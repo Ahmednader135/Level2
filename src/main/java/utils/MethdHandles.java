@@ -21,11 +21,18 @@ public class MethdHandles {
                ExpectedConditions.presenceOfElementLocated(locator)));
        driver.findElement(locator).click();
    }
-    protected void sendKeys(By locator ,String text){
+    protected void sendKeys(By locator , String text){
         wait =new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.and(ExpectedConditions.visibilityOf(driver.findElement(locator)),
                 ExpectedConditions.elementToBeClickable(locator),
                 ExpectedConditions.presenceOfElementLocated(locator)));
         driver.findElement(locator).sendKeys(text);
+    }
+    protected String getText(By locator) {
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.and(ExpectedConditions.visibilityOf(driver.findElement(locator)),
+                ExpectedConditions.elementToBeClickable(locator),
+                ExpectedConditions.presenceOfElementLocated(locator)));
+        return driver.findElement(locator).getText();
     }
 }

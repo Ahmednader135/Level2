@@ -13,15 +13,24 @@ public class LoginPage extends MethdHandles {
     private By passwordField = By.id("Password");
     private By loginButton = By.xpath("//button[contains(text(),'Log in')]");
 
-    public void sendUserName(String username) {
+    private By validation = By.cssSelector(".message-error.validation-summary-errors");
+
+    public void sendUserName(String username)
+    {
         sendKeys(emailField, username);
     }
 
-    public void sendPassword(String password) {
+    public void sendPassword(String password)
+    {
         sendKeys(passwordField, password);
     }
 
-    public void clickOnLoginButton(){
+    public void clickOnLoginButton()
+    {
        click(loginButton);
+    }
+
+    public String getValidationMessage() {
+        return getText(validation);
     }
 }

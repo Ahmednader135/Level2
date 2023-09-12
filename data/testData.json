@@ -1,5 +1,6 @@
 {
   "URL" : "https://demo.nopcommerce.com/",
+  "ExpectedResult" :"Login was unsuccessful.",
   "Login" : {
     "ValidCredentials" : {
       "UserName" : "Ahmed",
